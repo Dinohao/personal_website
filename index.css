@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* Simple reset for print - kept from original */
+@media print {
+  @page { margin: 0.5cm; size: auto; }
+  body { background-color: white !important; -webkit-print-color-adjust: exact; }
+}
