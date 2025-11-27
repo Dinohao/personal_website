@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -6,4 +7,9 @@ export default defineConfig({
   plugins: [react()],
   // 設定 base 為 './' 確保資源路徑在 GitHub Pages 子路徑下也能正常運作
   base: './',
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './test/setup.ts',
+  },
 })

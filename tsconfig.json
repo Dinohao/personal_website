@@ -16,5 +16,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["index.tsx"]
+  "include": ["index.tsx", "test"]
 }

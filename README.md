@@ -18,3 +18,21 @@ View your app in AI Studio: https://ai.studio/apps/drive/1xEQtxwFxQEssT4Ov37ci4C
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Setup Local Testing Environment
+
+This project uses Vitest and React Testing Library for unit and component testing.
+
+1.  **Install Testing Dependencies:**
+    Make sure you have installed the project's development dependencies:
+    ```bash
+    npm install
+    ```
+    This will install `vitest`, `@testing-library/react`, `@testing-library/jest-dom`, and `jsdom`.
+
+2.  **Run Tests:**
+    To execute the tests, use the following command:
+    ```bash
+    npm test
+    ```
+    Vitest will run all files ending with `.test.ts`, `.test.tsx`, `.spec.ts`, or `.spec.tsx` within your project.
