@@ -36,7 +36,7 @@ const CV_DATA = {
   contact: {
     phone: "+886-939-225-969",
     email: "tw824679513@gmail.com",
-    location: "Taiwan",
+    location: "Taipei, Taiwan 🇹🇼",
     linkedin: "https://www.linkedin.com/in/sheng-hao-huang-210632191/"
   },
   education: [
@@ -59,11 +59,11 @@ const CV_DATA = {
       location: "Taiwan",
       date: "Jul 2022 – Present",
       points: [
-        "Developed PCIe Gen5 SSD firmware for both consumer and enterprise devices across various form factors.",
-        "Developed backend algorithms for TLC/QLC NAND, emphasizing reliability and NAND error correction.",
-        "Participated in NAND bring-up process and conducted NAND feature characterization and analysis.",
-        "Collaborated with cross-functional teams to bring up large-capacity SSDs (up to 128TB), ensuring performance and compatibility.",
-        "Built Python tools to automate validation, log analysis, and debugging workflows."
+        <>Developed <strong className="text-orange-600 dark:text-yellow-400 font-bold">PCIe Gen5 SSD firmware</strong> for both consumer and enterprise devices across various form factors.</>,
+        <>Developed <strong className="text-orange-600 dark:text-yellow-400 font-bold">backend algorithms</strong> for <strong className="text-orange-600 dark:text-yellow-400 font-bold">TLC/QLC NAND</strong>, emphasizing <strong className="text-orange-600 dark:text-yellow-400 font-bold">reliability</strong> and <strong className="text-orange-600 dark:text-yellow-400 font-bold">NAND error correction</strong>.</>,
+        <>Drove <strong className="text-orange-600 dark:text-yellow-400 font-bold">NAND device bring-up</strong>, conducting feature characterization and analysis.</>,
+        <>Collaborated with cross-functional teams to bring up <strong className="text-orange-600 dark:text-yellow-400 font-bold">large-capacity SSDs (up to 128TB)</strong>, ensuring performance and compatibility.</>,
+        <>Built <strong className="text-orange-600 dark:text-yellow-400 font-bold">Python tools</strong> to <strong className="text-orange-600 dark:text-yellow-400 font-bold">automate validation, log analysis, and debugging workflows</strong>.</>
       ]
     },
     {
@@ -72,8 +72,7 @@ const CV_DATA = {
       location: "Germany",
       date: "Oct 2021 – Apr 2022",
       points: [
-        "Contributed to Nano-positioning and Nano-measuring machine (NPMM) project and develop reconstruction algorithm of NPMM.",
-        "Developed large-field reconstruction algorithms and simulated results using Python."
+        <>Designed and developed the <strong className="text-orange-600 dark:text-yellow-400 font-bold">core reconstruction algorithm</strong> for the <strong className="text-orange-600 dark:text-yellow-400 font-bold">Nano-Positioning and Nano-Measuring Machine (NPMM)</strong> project, including <strong className="text-orange-600 dark:text-yellow-400 font-bold">large-field techniques</strong>, <strong className="text-orange-600 dark:text-yellow-400 font-bold">simulating the methodology</strong> and <strong className="text-orange-600 dark:text-yellow-400 font-bold">analyzing the resulting data for validation</strong>.</>
       ]
     }
   ],
@@ -83,21 +82,21 @@ const CV_DATA = {
       subtitle: "",
       date: "Sep 2019 – Jun 2021",
       tech: ["Robotics", "Signal Processing", "System Integration"],
-      description: "Developed automated robot arm end-effector pose detection system, including system integration、software development、 algorithm design and signal processing."
+      description: <>Developed <strong className="text-orange-600 dark:text-yellow-400 font-bold">automated robot arm end-effector pose detection system</strong>, including system integration, software development, algorithm design and signal processing.</>
     },
     {
       title: "Automated object recognition and classification system",
       subtitle: "NTU Course project",
       date: "Nov 2019 – Jan 2021",
       tech: ["3D Scanning", "Point Cloud", "Algorithms"],
-      description: "Using a developed structured light 3D scanner to reconstruct the point cloud of measured object and implement point cloud registration algorithm to achieve object classification and recognition."
+      description: <>Using a developed <strong className="text-orange-600 dark:text-yellow-400 font-bold">structured light 3D scanner</strong> to reconstruct the point cloud of measured object and implement <strong className="text-orange-600 dark:text-yellow-400 font-bold">point cloud registration algorithm</strong> to achieve object classification and recognition.</>
     },
     {
       title: "Real time machine temperature monitoring",
       subtitle: "NTU course project",
       date: "Nov 2019 – Jan 2021",
       tech: ["NUVOTON M478", "TCP/IP", "IoT", "SPI"],
-      description: "Using microcontroller (NUVOTON M478) to get the temperature of K-type thermocouple (MAX 31865) through SPI protocol and transmitted data via lightweight TCP/IP to a front-end for real-time visualization."
+      description: <>Using <strong className="text-orange-600 dark:text-yellow-400 font-bold">microcontroller (NUVOTON M478)</strong> to get the temperature of K-type thermocouple (MAX 31865) through <strong className="text-orange-600 dark:text-yellow-400 font-bold">SPI protocol</strong> and transmitted data via <strong className="text-orange-600 dark:text-yellow-400 font-bold">lightweight TCP/IP</strong> to a front-end for real-time visualization.</>
     }
   ],
   awards: [
@@ -107,7 +106,7 @@ const CV_DATA = {
     "Honorable Mention in College Mechanical and Electrical and Creative Implementation Competition 2021"
   ],
   skills: {
-    programming: ["C/C++", "Python", "Shell", "Bash"],
+    programming: ["C/C++", "Python", "Shell", "Bash", "NAND", "FTL"],
     tools: ["Git", "JIRA", "Logic Analyzer"],
     languages: ["Chinese (Native speaker)", "English (Fluent, TOEIC 820)"]
   }
@@ -266,7 +265,7 @@ const CodeTypewriter = () => {
     [
       { text: "  stack: [", className: "text-blue-300" },
     ],
-    ...CV_DATA.skills.programming.slice(0, 3).map(skill => ([
+    ...CV_DATA.skills.programming.map(skill => ([
        { text: `    "${skill}"`, className: "text-green-400" },
        { text: ",", className: "text-gray-400" },
     ])),
@@ -275,7 +274,7 @@ const CodeTypewriter = () => {
     ],
      [
       { text: "  status: ", className: "text-blue-300" },
-      { text: `"Building fast storage"`, className: "text-green-400" },
+      { text: `"Building the invisible foundations of tomorrow."`, className: "text-green-400" },
     ],
     [
       { text: "};", className: "text-yellow-400" },
@@ -338,7 +337,7 @@ const CodeTypewriter = () => {
   }, [codeStructure]);
 
   return (
-    <div className="font-mono text-sm leading-relaxed overflow-x-hidden w-full h-full">
+    <div className="font-mono text-sm leading-relaxed w-full h-full">
       {codeStructure.map((line, lIndex) => {
         // If line hasn't started typing yet, don't render
         if (lIndex > cursorState.line) return null;
@@ -408,7 +407,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
-              Architecting high-performance <span className="text-blue-600 dark:text-blue-400 font-semibold">PCIe Gen5 SSD</span> firmware and robust validation tools. Turning complex NAND logic into reliable storage solutions.
+              Expertise in architecting high-performance <span className="text-blue-600 dark:text-blue-400 font-semibold">PCIe Gen5 SSD</span> firmware and comprehensive validation tools. Focused on transforming complex NAND logic into reliable storage solutions.
             </p>
             
             <div className="flex flex-wrap gap-3 pt-4">
@@ -433,7 +432,7 @@ const Hero = () => {
 
           {/* Code/Tech Visual */}
           <div className="md:w-1/2 w-full flex justify-center md:justify-end">
-            <div className="w-full max-w-md bg-gray-900 rounded-xl shadow-2xl border border-gray-800 overflow-hidden transform transition-all hover:scale-[1.02] hover:shadow-blue-500/20 duration-500 min-h-[360px]">
+            <div className="w-full max-w-lg bg-gray-900 rounded-xl shadow-2xl border border-gray-800 overflow-hidden transform transition-all hover:scale-[1.02] hover:shadow-blue-500/20 duration-500 min-h-[360px]">
               <div className="bg-gray-800 px-4 py-2 flex items-center space-x-2 border-b border-gray-700">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -488,7 +487,7 @@ const Experience = () => {
                     </div>
                     <div className="flex flex-col sm:items-end mt-2 sm:mt-0 text-sm text-gray-500 dark:text-gray-400 font-mono">
                       <span className="flex items-center bg-white dark:bg-gray-800 px-2 py-1 rounded border border-gray-100 dark:border-gray-700"><Calendar className="w-3 h-3 mr-2"/> {job.date}</span>
-                      <span className="flex items-center mt-1 bg-white dark:bg-gray-800 px-2 py-1 rounded border border-gray-100 dark:border-gray-700"><MapPin className="w-3 h-3 mr-2"/> {job.location}</span>
+                      <span className="flex items-center mt-1 bg-white dark:bg-gray-800 px-2 py-1 rounded border border-gray-100 dark:border-gray-700"><MapPin className="w-3 h-3 mr-2"/> {job.location === "Taiwan" ? "🇹🇼 Taiwan" : job.location === "Germany" ? "🇩🇪 Germany" : job.location}</span>
                     </div>
                   </div>
 
@@ -519,19 +518,24 @@ const Education = () => {
              </div>
              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Education</h2>
           </div>
-          <div className="space-y-6">
+          <div className="relative border-l-2 border-gray-200 dark:border-gray-800 ml-3 md:ml-6 space-y-12">
             {CV_DATA.education.map((edu, idx) => (
-              <div key={idx} className="bg-white dark:bg-card p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] hover:shadow-2xl hover:shadow-purple-500/10 hover:border-purple-500/30 group cursor-default">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                    <h3 className="font-bold text-xl text-gray-900 dark:text-white group-hover:text-purple-500 transition-colors">{edu.school}</h3>
-                    <span className="text-sm text-gray-500 dark:text-gray-400 font-mono mt-1 md:mt-0 bg-gray-50 dark:bg-gray-800 px-2 py-1 rounded">{edu.date}</span>
-                </div>
-                <p className="text-purple-600 dark:text-purple-400 font-semibold text-lg">{edu.degree}</p>
-                {edu.details && (
-                  <div className="mt-4 inline-block bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-md text-sm font-medium border border-purple-100 dark:border-purple-800">
-                    {edu.details}
+              <div key={idx} className="relative pl-8 md:pl-12 group">
+                {/* Timeline Dot (for Education) */}
+                <div className="absolute left-[-9px] top-6 w-4 h-4 rounded-full bg-white dark:bg-dark border-4 border-purple-500 transition-all duration-300 group-hover:scale-150 group-hover:border-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                
+                <div className="bg-white dark:bg-card p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] hover:shadow-2xl hover:shadow-purple-500/10 hover:border-purple-500/30 group cursor-default">
+                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                      <h3 className="font-bold text-xl text-gray-900 dark:text-white group-hover:text-purple-500 transition-colors">{edu.school}</h3>
+                      <span className="flex items-center mt-1 md:mt-0 bg-white dark:bg-gray-800 px-2 py-1 rounded border border-gray-100 dark:border-gray-700 text-sm text-gray-500 dark:text-gray-400 font-mono"><Calendar className="w-3 h-3 mr-2"/> {edu.date}</span>
                   </div>
-                )}
+                  <p className="text-purple-600 dark:text-purple-400 font-semibold text-lg">{edu.degree}</p>
+                  {edu.details && (
+                    <div className="mt-4 inline-block bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-md text-sm font-medium border border-purple-100 dark:border-purple-800">
+                      {edu.details}
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -671,7 +675,7 @@ const PrintResume = () => {
             <div key={i} className="mb-5 break-inside-avoid">
                <div className="flex justify-between items-baseline mb-1">
                   <div className="text-[11pt]">
-                    <span className="font-bold">{exp.company}</span> — <span className="italic">{exp.role}, {exp.location}</span>
+                    <span className="font-bold">{exp.company}</span> — <span className="italic">{exp.role}, {exp.location === "Taiwan" ? "🇹🇼 Taiwan" : exp.location === "Germany" ? "🇩🇪 Germany" : exp.location}</span>
                   </div>
                   <span className="text-[11pt]">{exp.date}</span>
                </div>
